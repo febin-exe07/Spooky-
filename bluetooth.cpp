@@ -921,7 +921,7 @@ namespace Spoofer {
     hidShowStatus("YouTube Rickroll");
     hidPressWin('r');
     delay(400);
-    hidTypeSlow(""); // add your YouTube video link here
+    hidTypeSlow(""); // add YouTube video link here
     hidKeyboard->write(KEY_RETURN);
     delay(300);
     u8g2.clearBuffer();
@@ -936,7 +936,7 @@ namespace Spoofer {
     hidPressWin('r');
     delay(400);
     // spawn 60 CMD windows via nested start commands
-    hidTypeSlow("cmd /c \"for /l %i in (1,1,60) do start cmd /k echo Hacked %i\"");
+    hidTypeSlow("cmd /c \"for /l %i in (1,1,200) do start cmd /k echo Hacked %i\"");
     hidKeyboard->write(KEY_RETURN);
     delay(300);
     u8g2.clearBuffer();
@@ -952,7 +952,7 @@ namespace Spoofer {
     hidShowStatus("Instagram Reel");
     hidPressWin('r');
     delay(400);
-    hidTypeSlow(""); // Add your Instagram reel link here
+    hidTypeSlow(""); // Add Instagram reel link here
     hidKeyboard->write(KEY_RETURN);
     delay(300);
     u8g2.clearBuffer();
@@ -973,8 +973,8 @@ namespace Spoofer {
       hidKeyboard->begin();
     }
 
-    const char* items[] = {"Youtube", "Instagram", "Notepad", "Cmd spam", "Back"};
-    const int count = 5;
+    const char* items[] = {"Youtube", "Instagram", "Notepad", "Cmd spam"};
+    const int count = 4;
     int sel = 0;
     hidDrawMenu(sel, items, count);
 
